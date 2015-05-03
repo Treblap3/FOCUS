@@ -14,6 +14,7 @@
 		89FF7D5D1AF5832300DE94CE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89FF7D5C1AF5832300DE94CE /* Images.xcassets */; };
 		89FF7D601AF5832300DE94CE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89FF7D5E1AF5832300DE94CE /* LaunchScreen.xib */; };
 		89FF7D6C1AF5832300DE94CE /* FOCUSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FF7D6B1AF5832300DE94CE /* FOCUSTests.swift */; };
+		89FF7D771AF59D2300DE94CE /* focusApp_quotes.json in Resources */ = {isa = PBXBuildFile; fileRef = 89FF7D761AF59D2300DE94CE /* focusApp_quotes.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		89FF7D651AF5832300DE94CE /* FOCUSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FOCUSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89FF7D6A1AF5832300DE94CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89FF7D6B1AF5832300DE94CE /* FOCUSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FOCUSTests.swift; sourceTree = "<group>"; };
+		89FF7D761AF59D2300DE94CE /* focusApp_quotes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = focusApp_quotes.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		89FF7D501AF5832300DE94CE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				89FF7D761AF59D2300DE94CE /* focusApp_quotes.json */,
 				89FF7D511AF5832300DE94CE /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -197,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89FF7D5B1AF5832300DE94CE /* Main.storyboard in Resources */,
+				89FF7D771AF59D2300DE94CE /* focusApp_quotes.json in Resources */,
 				89FF7D601AF5832300DE94CE /* LaunchScreen.xib in Resources */,
 				89FF7D5D1AF5832300DE94CE /* Images.xcassets in Resources */,
 			);

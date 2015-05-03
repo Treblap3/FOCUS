@@ -10,9 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var focusLabel: UILabel!
+    @IBOutlet weak var appSloganLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // Animation to dim the app Name and Slogan.
+        var duration: NSTimeInterval = 2.0
+        UIView.animateWithDuration(duration, animations: {
+            
+        })
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
     }
 
     override func didReceiveMemoryWarning() {

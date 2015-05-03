@@ -37,6 +37,10 @@
                             <constraint firstItem="POw-Ed-KxW" firstAttribute="top" secondItem="UVQ-Gs-Idc" secondAttribute="bottom" constant="30" id="wDu-7o-3fG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="appSloganLabel" destination="POw-Ed-KxW" id="NKx-Me-MYK"/>
+                        <outlet property="focusLabel" destination="UVQ-Gs-Idc" id="nX1-pT-gES"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
