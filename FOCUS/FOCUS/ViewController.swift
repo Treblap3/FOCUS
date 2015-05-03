@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController
+{
+    var quoteArray: [Quotes] = [Quotes]()
 
     @IBOutlet weak var focusLabel: UILabel!
     @IBOutlet weak var appSloganLabel: UILabel!
@@ -17,11 +19,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         // Animation to dim the app Name and Slogan.
-        var duration: NSTimeInterval = 1.0
+        var duration: NSTimeInterval = 2.0
+        var secondDuration: NSTimeInterval = 1.0
         UIView.animateWithDuration(duration, animations: {
             self.appSloganLabel.alpha = 0
             }, completion: {finished in
-                UIView.animateWithDuration(duration, animations: {
+                UIView.animateWithDuration(secondDuration, animations: {
                     self.focusLabel.alpha = 0
                 })
         })
