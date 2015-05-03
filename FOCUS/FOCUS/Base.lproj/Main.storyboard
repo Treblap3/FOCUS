@@ -47,7 +47,11 @@
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="1hR-Md-b9B" secondAttribute="bottom" constant="20" id="zHX-Aa-fSS"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="1oT-wR-Z5o"/>
+                    <navigationItem key="navigationItem" id="1oT-wR-Z5o">
+                        <barButtonItem key="rightBarButtonItem" image="tableViewButton" id="Qv0-Xm-erP">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="appSloganLabel" destination="POw-Ed-KxW" id="NKx-Me-MYK"/>
                         <outlet property="focusLabel" destination="UVQ-Gs-Idc" id="nX1-pT-gES"/>
@@ -77,4 +81,7 @@
             <point key="canvasLocation" x="309" y="-248"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tableViewButton" width="22" height="22"/>
+    </resources>
 </document>
