@@ -17,9 +17,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         // Animation to dim the app Name and Slogan.
-        var duration: NSTimeInterval = 2.0
+        var duration: NSTimeInterval = 1.0
         UIView.animateWithDuration(duration, animations: {
-            
+            self.appSloganLabel.alpha = 0
+            }, completion: {finished in
+                UIView.animateWithDuration(duration, animations: {
+                    self.focusLabel.alpha = 0
+                })
         })
     }
     
@@ -33,5 +37,6 @@ class ViewController: UIViewController {
     }
 
 
+    
 }
 

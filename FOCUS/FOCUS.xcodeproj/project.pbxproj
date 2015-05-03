@@ -15,6 +15,7 @@
 		89FF7D601AF5832300DE94CE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89FF7D5E1AF5832300DE94CE /* LaunchScreen.xib */; };
 		89FF7D6C1AF5832300DE94CE /* FOCUSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FF7D6B1AF5832300DE94CE /* FOCUSTests.swift */; };
 		89FF7D771AF59D2300DE94CE /* focusApp_quotes.json in Resources */ = {isa = PBXBuildFile; fileRef = 89FF7D761AF59D2300DE94CE /* focusApp_quotes.json */; };
+		89FF7D791AF5C24200DE94CE /* Quotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FF7D781AF5C24200DE94CE /* Quotes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		89FF7D6A1AF5832300DE94CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89FF7D6B1AF5832300DE94CE /* FOCUSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FOCUSTests.swift; sourceTree = "<group>"; };
 		89FF7D761AF59D2300DE94CE /* focusApp_quotes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = focusApp_quotes.json; sourceTree = "<group>"; };
+		89FF7D781AF5C24200DE94CE /* Quotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quotes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			children = (
 				89FF7D521AF5832300DE94CE /* AppDelegate.swift */,
 				89FF7D571AF5832300DE94CE /* ViewController.swift */,
+				89FF7D781AF5C24200DE94CE /* Quotes.swift */,
 				89FF7D591AF5832300DE94CE /* Main.storyboard */,
 				89FF7D5C1AF5832300DE94CE /* Images.xcassets */,
 				89FF7D5E1AF5832300DE94CE /* LaunchScreen.xib */,
@@ -236,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89FF7D791AF5C24200DE94CE /* Quotes.swift in Sources */,
 				89FF7D581AF5832300DE94CE /* ViewController.swift in Sources */,
 				89FF7D561AF5832300DE94CE /* FOCUS.xcdatamodeld in Sources */,
 				89FF7D531AF5832300DE94CE /* AppDelegate.swift in Sources */,
