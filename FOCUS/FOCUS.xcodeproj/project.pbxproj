@@ -438,6 +438,7 @@
 				89FF7D711AF5832300DE94CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		89FF7D721AF5832300DE94CE /* Build configuration list for PBXNativeTarget "FOCUSTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +447,7 @@
 				89FF7D741AF5832300DE94CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

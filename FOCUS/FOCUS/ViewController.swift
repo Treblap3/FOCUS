@@ -14,6 +14,8 @@ class ViewController: UIViewController
 
     @IBOutlet weak var focusLabel: UILabel!
     @IBOutlet weak var appSloganLabel: UILabel!
+    @IBOutlet weak var infoButton: UIButton!
+    //@IBOutlet weak var tableViewButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,12 +28,20 @@ class ViewController: UIViewController
             }, completion: {finished in
                 UIView.animateWithDuration(secondDuration, animations: {
                     self.focusLabel.alpha = 0
+                    }, completion: {Finished in
+                        UIView.animateWithDuration(secondDuration, animations: {
+                            self.infoButton.alpha = 1
+                            // self.tableViewButton.alpha = 1
+                        })
                 })
         })
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
+        self.infoButton.alpha = 0
+        //self.tableViewButton.alpha = 0
     }
 
     override func didReceiveMemoryWarning() {
