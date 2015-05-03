@@ -39,7 +39,15 @@ class ViewController: UIViewController
         // Dispose of any resources that can be recreated.
     }
 
+    func randomQuoteToDisplay()
+    {
+        // TODO: Terminate this method and implement the return value.
+    }
 
-    
+    // TODO: Add a button to segue to a table view with all quotes.
+    // TODO: Add a setting/about button for giving credit to people helping + the link to the Github code.
+    // TODO: Add a "next" button to randomly display another quote + animations.
+    // TODO: Add a Share on Facebook button.
+    // TODO: Add a Share on Twitter button.
 }
 
