@@ -20,6 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: false)
         // Set the navigation bar's color and text color:
         UINavigationBar.appearance().barTintColor = UIColor(red: 102.0/255.0, green: 204.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+        if let navBarFont = UIFont(name: "AvenirNext-Medium", size: 22.0)
+        {
+            UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: navBarFont]    
+        }
+        
 
         
         

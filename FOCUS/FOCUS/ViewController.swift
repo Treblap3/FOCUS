@@ -15,23 +15,31 @@ class ViewController: UIViewController
     @IBOutlet weak var focusLabel: UILabel!
     @IBOutlet weak var appSloganLabel: UILabel!
     @IBOutlet weak var infoButton: UIButton!
-    //@IBOutlet weak var tableViewButton: UIButton!
+    @IBOutlet weak var quoteTextField: UILabel!
+    @IBOutlet weak var authorTextField: UILabel!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Navigation Bar:
+        self.navigationItem.title = "Quotes"
+        
         // Animation to dim the app Name and Slogan.
-        var duration: NSTimeInterval = 2.0
-        var secondDuration: NSTimeInterval = 1.0
+        var duration: NSTimeInterval = 1.0
         UIView.animateWithDuration(duration, animations: {
             self.appSloganLabel.alpha = 0
             }, completion: {finished in
-                UIView.animateWithDuration(secondDuration, animations: {
+                UIView.animateWithDuration(duration, animations: {
                     self.focusLabel.alpha = 0
                     }, completion: {Finished in
-                        UIView.animateWithDuration(secondDuration, animations: {
+                        UIView.animateWithDuration(duration, animations: {
                             self.infoButton.alpha = 1
-                            // self.tableViewButton.alpha = 1
+                            }, completion: {finished in
+                                UIView.animateWithDuration(duration, animations: {
+                                    self.quoteTextField.alpha = 1
+                                    self.authorTextField.alpha = 1
+                                })
                         })
                 })
         })
