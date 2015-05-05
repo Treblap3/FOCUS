@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89CD05801AF8966900811223 /* QuotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CD057F1AF8966900811223 /* QuotesTableViewController.swift */; };
+		89CD05821AF8970B00811223 /* QuoteCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CD05811AF8970B00811223 /* QuoteCustomCell.swift */; };
+		89CD05841AF897AD00811223 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CD05831AF897AD00811223 /* InfoViewController.swift */; };
 		89FF7D531AF5832300DE94CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FF7D521AF5832300DE94CE /* AppDelegate.swift */; };
 		89FF7D561AF5832300DE94CE /* FOCUS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 89FF7D541AF5832300DE94CE /* FOCUS.xcdatamodeld */; };
 		89FF7D581AF5832300DE94CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FF7D571AF5832300DE94CE /* ViewController.swift */; };
@@ -29,6 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		89CD057F1AF8966900811223 /* QuotesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotesTableViewController.swift; sourceTree = "<group>"; };
+		89CD05811AF8970B00811223 /* QuoteCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteCustomCell.swift; sourceTree = "<group>"; };
+		89CD05831AF897AD00811223 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		89FF7D4D1AF5832300DE94CE /* FOCUS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FOCUS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89FF7D511AF5832300DE94CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89FF7D521AF5832300DE94CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +92,9 @@
 				89FF7D521AF5832300DE94CE /* AppDelegate.swift */,
 				89FF7D571AF5832300DE94CE /* ViewController.swift */,
 				89FF7D781AF5C24200DE94CE /* Quotes.swift */,
+				89CD057F1AF8966900811223 /* QuotesTableViewController.swift */,
+				89CD05811AF8970B00811223 /* QuoteCustomCell.swift */,
+				89CD05831AF897AD00811223 /* InfoViewController.swift */,
 				89FF7D591AF5832300DE94CE /* Main.storyboard */,
 				89FF7D5C1AF5832300DE94CE /* Images.xcassets */,
 				89FF7D5E1AF5832300DE94CE /* LaunchScreen.xib */,
@@ -239,10 +248,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89CD05801AF8966900811223 /* QuotesTableViewController.swift in Sources */,
 				89FF7D791AF5C24200DE94CE /* Quotes.swift in Sources */,
 				89FF7D581AF5832300DE94CE /* ViewController.swift in Sources */,
+				89CD05841AF897AD00811223 /* InfoViewController.swift in Sources */,
 				89FF7D561AF5832300DE94CE /* FOCUS.xcdatamodeld in Sources */,
 				89FF7D531AF5832300DE94CE /* AppDelegate.swift in Sources */,
+				89CD05821AF8970B00811223 /* QuoteCustomCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

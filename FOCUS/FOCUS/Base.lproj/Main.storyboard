@@ -35,6 +35,9 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="RCG-6e-XE1" kind="presentation" id="A0u-G0-TUV"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="quoteTextField" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnS-OE-JFS" userLabel="quoteTextField">
                                 <rect key="frame" x="36" y="124" width="528" height="28"/>
@@ -51,7 +54,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PaN-W7-8o1" userLabel="socialShareContainer">
                                 <rect key="frame" x="56" y="410" width="488" height="90"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s7d-h0-GWj" userLabel="twitterShareButton">
+                                    <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s7d-h0-GWj" userLabel="twitterShareButton">
                                         <rect key="frame" x="139" y="0.0" width="90" height="90"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="90" id="KwI-92-gJM"/>
@@ -63,7 +66,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOf-yp-N9r" userLabel="facebookShareButton">
+                                    <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOf-yp-N9r" userLabel="facebookShareButton">
                                         <rect key="frame" x="259" y="0.0" width="90" height="90"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="90" id="8Oy-LK-Z3D"/>
@@ -108,19 +111,87 @@
                     <navigationItem key="navigationItem" id="1oT-wR-Z5o">
                         <barButtonItem key="rightBarButtonItem" image="tableViewButton" id="Qv0-Xm-erP">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="Iwr-kx-JoW" kind="show" id="e7q-ho-wM9"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="appSloganLabel" destination="POw-Ed-KxW" id="NKx-Me-MYK"/>
                         <outlet property="authorTextField" destination="0FI-em-7hy" id="bK6-C8-bMQ"/>
+                        <outlet property="facebookShareButton" destination="SOf-yp-N9r" id="Iel-fw-QPV"/>
                         <outlet property="focusLabel" destination="UVQ-Gs-Idc" id="nX1-pT-gES"/>
                         <outlet property="infoButton" destination="1hR-Md-b9B" id="nG5-tw-ten"/>
                         <outlet property="quoteTextField" destination="vnS-OE-JFS" id="m5o-DT-g6l"/>
+                        <outlet property="twitterShareButton" destination="s7d-h0-GWj" id="BNj-Ac-Hl1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1035" y="-248"/>
+        </scene>
+        <!--Info View Controller-->
+        <scene sceneID="r5Z-wE-pXF">
+            <objects>
+                <viewController id="RCG-6e-XE1" customClass="InfoViewController" customModule="FOCUS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Kij-fB-p4h"/>
+                        <viewControllerLayoutGuide type="bottom" id="P9o-Y1-tfX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bs6-rB-4GD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bRr-bw-cV6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1035" y="463"/>
+        </scene>
+        <!--Quotes Table View Controller-->
+        <scene sceneID="WNp-Up-YDm">
+            <objects>
+                <tableViewController id="Iwr-kx-JoW" customClass="QuotesTableViewController" customModule="FOCUS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="3B1-Ny-0Ko">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="ohn-yB-UaJ" detailTextLabel="Fyy-OY-GeE" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="8k4-XF-dMa" customClass="QuoteCustomCell" customModule="FOCUS" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8k4-XF-dMa" id="Ybf-AR-vqh">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="quoteLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ohn-yB-UaJ">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="authorLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fyy-OY-GeE">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="authorCellLabel" destination="Fyy-OY-GeE" id="yG9-WN-Bu7"/>
+                                    <outlet property="quoteCellLabel" destination="ohn-yB-UaJ" id="5O6-Jx-9si"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="Iwr-kx-JoW" id="4D1-ae-lmG"/>
+                            <outlet property="delegate" destination="Iwr-kx-JoW" id="FZ9-5w-XBU"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O3k-wv-Y1e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1757" y="-248"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="R53-eD-5El">

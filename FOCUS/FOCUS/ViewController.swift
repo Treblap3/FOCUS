@@ -17,8 +17,9 @@ class ViewController: UIViewController
     @IBOutlet weak var infoButton: UIButton!
     @IBOutlet weak var quoteTextField: UILabel!
     @IBOutlet weak var authorTextField: UILabel!
+    @IBOutlet weak var twitterShareButton: UIButton!
+    @IBOutlet weak var facebookShareButton: UIButton!
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,11 +35,13 @@ class ViewController: UIViewController
                     self.focusLabel.alpha = 0
                     }, completion: {Finished in
                         UIView.animateWithDuration(duration, animations: {
-                            self.infoButton.alpha = 1
+                            self.quoteTextField.alpha = 1
+                            self.authorTextField.alpha = 1
                             }, completion: {finished in
                                 UIView.animateWithDuration(duration, animations: {
-                                    self.quoteTextField.alpha = 1
-                                    self.authorTextField.alpha = 1
+                                    self.infoButton.alpha = 1
+                                    self.twitterShareButton.alpha = 1
+                                    self.facebookShareButton.alpha = 1
                                 })
                         })
                 })
