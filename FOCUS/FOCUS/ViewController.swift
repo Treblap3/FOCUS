@@ -19,6 +19,7 @@ class ViewController: UIViewController
     @IBOutlet weak var authorTextField: UILabel!
     @IBOutlet weak var twitterShareButton: UIButton!
     @IBOutlet weak var facebookShareButton: UIButton!
+    @IBOutlet weak var refreshButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +43,7 @@ class ViewController: UIViewController
                                     self.infoButton.alpha = 1
                                     self.twitterShareButton.alpha = 1
                                     self.facebookShareButton.alpha = 1
+                                    self.refreshButton.alpha = 1
                                 })
                         })
                 })

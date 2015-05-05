@@ -29,7 +29,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hR-Md-b9B" userLabel="infoButton">
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hR-Md-b9B" userLabel="infoButton">
                                 <rect key="frame" x="562" y="558" width="22" height="22"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal">
@@ -87,6 +87,14 @@
                                     <constraint firstAttribute="centerY" secondItem="SOf-yp-N9r" secondAttribute="centerY" id="TPX-g4-gEz"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A70-aJ-0ep" userLabel="refreshButton">
+                                <rect key="frame" x="273" y="356" width="55" height="34"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                <state key="normal" title="Refresh">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -94,6 +102,7 @@
                             <constraint firstAttribute="centerX" secondItem="POw-Ed-KxW" secondAttribute="centerX" id="3Ff-1y-hkS"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="PaN-W7-8o1" secondAttribute="bottom" constant="100" id="5jZ-W5-54c"/>
                             <constraint firstItem="1hR-Md-b9B" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="H5V-9Y-6D4"/>
+                            <constraint firstAttribute="centerX" secondItem="A70-aJ-0ep" secondAttribute="centerX" id="IaR-NH-nQk"/>
                             <constraint firstItem="PaN-W7-8o1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="40" id="Q2j-as-9VR"/>
                             <constraint firstItem="vnS-OE-JFS" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="60" id="Ram-0S-b50"/>
                             <constraint firstItem="0FI-em-7hy" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="b0D-6v-d6g"/>
@@ -103,6 +112,7 @@
                             <constraint firstAttribute="centerY" secondItem="UVQ-Gs-Idc" secondAttribute="centerY" constant="50" id="mf4-G0-8uc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PaN-W7-8o1" secondAttribute="trailing" constant="40" id="mqm-wi-Ljl"/>
                             <constraint firstItem="0FI-em-7hy" firstAttribute="top" secondItem="vnS-OE-JFS" secondAttribute="bottom" constant="30" id="pew-Sl-QS5"/>
+                            <constraint firstItem="PaN-W7-8o1" firstAttribute="top" secondItem="A70-aJ-0ep" secondAttribute="bottom" constant="20" id="vTY-Xs-0cx"/>
                             <constraint firstItem="POw-Ed-KxW" firstAttribute="top" secondItem="UVQ-Gs-Idc" secondAttribute="bottom" constant="30" id="wDu-7o-3fG"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="1hR-Md-b9B" secondAttribute="bottom" constant="20" id="zHX-Aa-fSS"/>
                             <constraint firstAttribute="centerX" secondItem="vnS-OE-JFS" secondAttribute="centerX" id="zWM-vo-Xdf"/>
@@ -123,6 +133,7 @@
                         <outlet property="focusLabel" destination="UVQ-Gs-Idc" id="nX1-pT-gES"/>
                         <outlet property="infoButton" destination="1hR-Md-b9B" id="nG5-tw-ten"/>
                         <outlet property="quoteTextField" destination="vnS-OE-JFS" id="m5o-DT-g6l"/>
+                        <outlet property="refreshButton" destination="A70-aJ-0ep" id="ut2-P1-W7c"/>
                         <outlet property="twitterShareButton" destination="s7d-h0-GWj" id="BNj-Ac-Hl1"/>
                     </connections>
                 </viewController>
@@ -157,7 +168,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="ohn-yB-UaJ" detailTextLabel="Fyy-OY-GeE" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="8k4-XF-dMa" customClass="QuoteCustomCell" customModule="FOCUS" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="ohn-yB-UaJ" detailTextLabel="Fyy-OY-GeE" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="8k4-XF-dMa" customClass="QuoteCustomCell" customModule="FOCUS" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8k4-XF-dMa" id="Ybf-AR-vqh">
                                     <autoresizingMask key="autoresizingMask"/>
