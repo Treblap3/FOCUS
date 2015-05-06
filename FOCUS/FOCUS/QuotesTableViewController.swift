@@ -8,16 +8,26 @@
 
 import UIKit
 
-class QuotesTableViewController: UITableViewController {
+class QuotesTableViewController: UITableViewController
+{
+    // URL for (maybe) use of the JSON file online and/or use for updates.
+    let quotesURL: String = "https://dl.dropboxusercontent.com/u/73002295/focusApp_quotes.json"
+    var quoteArray: [Quotes] = [Quotes]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        // Gets the latest quotes
+        self.getLatestQuotes()
+        
+        // Self sizing cells:
+        tableView.estimatedRowHeight = 80.0
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,24 +40,23 @@ class QuotesTableViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        return quoteArray.count
     }
 
-    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! QuoteCustomCell
 
-        // Configure the cell...
-
+        cell.quoteCellLabel.text = quoteArray[indexPath.row].quote
+        cell.authorCellLabel.text = "\"" + quoteArray[indexPath.row].author + "\""
+        
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -94,4 +103,71 @@ class QuotesTableViewController: UITableViewController {
     }
     */
 
+    // MARK: - JSON Data:
+    
+    func getLatestQuotes()
+    {
+        let request = NSURLRequest(URL: NSURL(string: quotesURL)!)
+        let urlSession = NSURLSession.sharedSession()
+        let task = urlSession.dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
+            if error != nil
+            {
+                println(error.localizedDescription)
+            }
+            
+            // Parse JSON Data:
+            self.quoteArray = self.parseJSONData(data)
+            
+            // Reload the table view:
+            dispatch_async(dispatch_get_main_queue(), {
+                self.tableView.reloadData()
+            })
+            
+        })
+        
+        task.resume()
+    }
+    
+    func parseJSONData(data: NSData) -> [Quotes]
+    {
+        var quotes = [Quotes]()
+        var error: NSError?
+        
+        let jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &error) as? NSDictionary
+        
+        if error != nil
+        {
+            println(error?.localizedDescription)
+        }
+        
+        // Parse JSON data:
+        let jsonQuotes = jsonResult?["quotes_en"] as! [AnyObject]
+        for jsonQuote in jsonQuotes
+        {
+            let quote = Quotes()
+            quote.quote = jsonQuote["quote"] as! String
+            quote.author = jsonQuote["author"] as! String
+            
+            quotes.append(quote)
+        }
+        
+        return quotes
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }

@@ -10,7 +10,11 @@ import UIKit
 
 class ViewController: UIViewController
 {
+    // URL for (maybe) use of the JSON file online and/or use for updates.
+    let quotesURL: String = "https://dl.dropboxusercontent.com/u/73002295/focusApp_quotes.json"
     var quoteArray: [Quotes] = [Quotes]()
+    var displayedQuote: String = String()
+    var displayedAuthor: String = String()
 
     @IBOutlet weak var focusLabel: UILabel!
     @IBOutlet weak var appSloganLabel: UILabel!
@@ -67,6 +71,27 @@ class ViewController: UIViewController
         // TODO: Terminate this method and implement the return value.
     }
 
+    // MARK: - @IBActions:
+    
+    @IBAction func refreshButtonPushed(sender: UIButton)
+    {
+        // Go to the next random quote and animate the change.
+    }
+    
+    
+    @IBAction func shareOnTwitterPushed(sender: UIButton)
+    {
+        // Share the displayed quote on Twitter.
+    }
+    
+    @IBAction func shareOnFacebookPushed(sender: UIButton)
+    {
+        // Share the displayed quote on Twitter.
+    }
+    
+    
+    
+    
     // TODO: Add a button to segue to a table view with all quotes.
     // TODO: Add a setting/about button for giving credit to people helping + the link to the Github code.
     // TODO: Add a "next" button to randomly display another quote + animations.

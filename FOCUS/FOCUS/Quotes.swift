@@ -10,12 +10,6 @@ import UIKit
 
 class Quotes: NSObject
 {
-    var quote: String = String()
-    var author: String = String()
- 
-    init(quote: String, author: String)
-    {
-        self.quote = quote
-        self.author = author
-    }
+    var quote: String = ""
+    var author: String = ""
 }
