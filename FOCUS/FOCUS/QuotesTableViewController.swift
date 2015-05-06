@@ -26,8 +26,9 @@ class QuotesTableViewController: UITableViewController
         self.getLatestQuotes()
         
         // Self sizing cells:
-        tableView.estimatedRowHeight = 80.0
+        tableView.estimatedRowHeight = 40.0
         tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,6 +36,10 @@ class QuotesTableViewController: UITableViewController
         // Dispose of any resources that can be recreated.
     }
 
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+
+    }
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {

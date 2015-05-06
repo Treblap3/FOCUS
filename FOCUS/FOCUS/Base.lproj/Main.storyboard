@@ -182,25 +182,26 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8k4-XF-dMa" id="Ybf-AR-vqh">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="quoteCellLabel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N1y-gb-QKr" userLabel="quoteCellLabel">
-                                            <rect key="frame" x="8" y="8" width="584" height="25"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="quoteCellLabel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N1y-gb-QKr" userLabel="quoteCellLabel">
+                                            <rect key="frame" x="8" y="8" width="584" height="49"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="authorCellLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Nb-ON-lGY" userLabel="authorCellLabel">
-                                            <rect key="frame" x="8" y="41" width="584" height="22"/>
+                                            <rect key="frame" x="8" y="65" width="584" height="22"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Italic" family="Avenir Next" pointSize="16"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="7Nb-ON-lGY" firstAttribute="top" secondItem="N1y-gb-QKr" secondAttribute="bottom" constant="8" id="05u-hW-4q3"/>
                                         <constraint firstItem="N1y-gb-QKr" firstAttribute="leading" secondItem="Ybf-AR-vqh" secondAttribute="leadingMargin" id="1Hx-a0-NB4"/>
                                         <constraint firstItem="N1y-gb-QKr" firstAttribute="top" secondItem="Ybf-AR-vqh" secondAttribute="topMargin" id="2fL-BZ-Bw0"/>
                                         <constraint firstItem="N1y-gb-QKr" firstAttribute="trailing" secondItem="Ybf-AR-vqh" secondAttribute="trailingMargin" id="5t5-j6-ZX0"/>
-                                        <constraint firstItem="7Nb-ON-lGY" firstAttribute="top" secondItem="N1y-gb-QKr" secondAttribute="bottom" constant="8" id="LRz-P8-qH0"/>
                                         <constraint firstItem="7Nb-ON-lGY" firstAttribute="trailing" secondItem="Ybf-AR-vqh" secondAttribute="trailingMargin" id="O08-Mt-hWg"/>
                                         <constraint firstItem="7Nb-ON-lGY" firstAttribute="leading" secondItem="Ybf-AR-vqh" secondAttribute="leadingMargin" id="WaW-Wk-A7j"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="7Nb-ON-lGY" secondAttribute="bottom" constant="8" id="bW3-Xe-zJj"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
