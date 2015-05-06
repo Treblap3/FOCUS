@@ -28,7 +28,6 @@ class QuotesTableViewController: UITableViewController
         // Self sizing cells:
         tableView.estimatedRowHeight = 40.0
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
